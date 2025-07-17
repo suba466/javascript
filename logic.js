@@ -44,3 +44,32 @@ switch(day){
       dayName="Saturday";
 }
 document.getElementById("switch").textContent="Today is Wednesday.";
+
+const output=document.getElementById("output");
+function checkPositive(num){
+   if(num>0){
+      return 'number is positive.<br>'; 
+   }
+   return "";
+}
+function checkEvenOrOdd(num){
+   if(num %2==0){
+      return "The number is even, <br>";
+   }else{
+      return "The number is odd. <br>";
+   }
+}
+function  gradeMark(mark){
+   if(mark>=90){
+      return `Grade: A<br>`;
+   }else if (mark >= 75) {
+        return `Grade: B<br>`;
+   } else if (mark >= 50) {
+        return `Grade: C<br>`;
+   } else {
+        return `Grade: Fail<br>`;
+   }
+}
+output.innerHTML +=checkPositive(10);
+output.innerHTML +=checkEvenOrOdd(143);
+output.innerHTML += gradeMark(92);
