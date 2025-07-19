@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</head>
+<body>
+
+      <div class="container-fluid mt-5">
+            <div class="card shadow p-4">
+                  <h2 class="text-center mb-4">APPLICATION FORM</h2>
+                   <div class="col-md-12">
+                        <label for="validationCustom01" class="form-label">Enter your name:</label>
+                        <input type="text" class="form-control" id="validationCustom01"><br>
+                        <label for="validationCustom1" class="form-label">Password:</label>
+                        <input type="password" class="form-control" id="validationCustom1"><br>
+                        <label for="dob" class="form-label">Date of birth:</label>
+                        <input type="date" class="form-control" id="dob" name="dob"><br>
+                        <label for="mail" class="form-label">Mail ID:</label>
+                        <input type="email" class="form-control" id="mail" name="mail"><br>
+                        <label for="phnNum" class="form-label">Mobile Number:</label>
+                        <input type="number" class="form-control" id="phnNum" name="phnNum"><br>
+                        <label class="form-label">Gender:</label><br>
+                        <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                              <label class="form-check-label" for="male">Male</label>
+                        <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                              <label class="form-check-label" for="female">Female</label>
+                        </div>
+                         <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="gender" id="other" value="other">
+                              <label class="form-check-label" for="other">Other</label>
+                        </div></div><br><br>
+                         <label for="qual" class="form-label">Qualification:</label>
+                         <select class="form-select" id="qual" name="qual">
+                              <option value="">--Select--</option>
+                              <option value="B.Sc.,">B.Sc.,</option>
+                              <option value="M.Sc.,">M.Sc.,</option>
+                              <option value="B.Com.,">B.Com.,</option>
+                              <option value="M.Com.,">M.Com.,</option>
+                        </select><br>
+                        <label class="form-label">Select Courses:</label><br>
+                        <div class="form-check">
+                              <input class="form-check-input" type="checkbox" id="course1" name="course1" value="Mathematics">
+                              <label class="form-check-label" for="course1">Mathematics</label>
+                        </div>
+                        <div class="form-check">
+                              <input class="form-check-input" type="checkbox" id="course2" name="course2" value="Psychology">
+                              <label class="form-check-label" for="course2">Psychology</label>
+                        </div>
+                        <div class="form-check">
+                              <input class="form-check-input" type="checkbox" id="course3" name="course3" value="Home Science">
+                              <label class="form-check-label" for="course3">Home Science</label>
+                        </div>
+                        <div class="form-check">
+                              <input class="form-check-input" type="checkbox" id="course4" name="course4" value="Information Technology">
+                              <label class="form-check-label" for="course4">Information Technology</label>
+                        </div>
+                        <div class="form-check">
+                              <input class="form-check-input" type="checkbox" id="course5" name="course5" value="Commerce">
+                              <label class="form-check-label" for="course5">Commerce</label>
+                        </div><br>
+                        <label for="myfile" class="form-label">Upload Document:</label>
+                        <input class="form-control" type="file" id="myfile" name="myfile"><br>
+                        <div style="float: right;">
+                              <button class="btn btn-primary me-md-2" type="button">Submit</button>
+                        </div>
+            </div>
+      </div>
+</body>
+</html>
