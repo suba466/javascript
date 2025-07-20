@@ -1,0 +1,32 @@
+body{
+    background-image: url(/Javascript/form.jpg);
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+}
+
+.container-sm{
+    background-color:rgba(0,0,0,0.7);
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+.form-control{
+    width: 60%;
+}
+.btn-submit {
+  background-color: white;
+  border: none;
+  color: black;
+  font-weight: bold;
+}
+
+.btn-submit:hover {
+  background-color: #009e88;
+}
+
+
+
+
+
+
