@@ -1,0 +1,25 @@
+body{
+    font-family: 'Courgette', cursive;
+    padding: 40px;
+    color: rgb(37, 113, 160);
+}
+.container{
+    background-color: #fff;
+    box-shadow: 0 0 10px #ccc;
+}
+input{
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+button{
+    padding: 8px 15px;
+    cursor: pointer;
+    border: 2px solid black;
+    color: rgb(37, 113, 160);
+}
+.output{
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}

@@ -6,16 +6,63 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>My First Web Page</h2>
+    <h3>Using innerHTML:</h3>
+    <h4>My First Web Page</h4>
     <p id="demo"></p>
     <p>My First Paragraph</p>
     <script>
         document.getElementById("demo").innerHTML="<h3>Hello world</h3>";   
     </script>
-    
+    <h3>Using innerText:</h3>
     <p id="start"></p>
     <script>
         document.getElementById("start").innerText="hiiiii";   
+    </script>
+    <h3>Using document.write():</h3>
+    <h5>My first paragraph.</h5>
+    <script>
+        document.write(5+7);
+    </script>
+    <p>My first paragraph.</p>
+    <button type="button" onclick="document.write(5+6)">Try it</button>
+    <h3>Using window.alert():</h3>
+    <p>My first paragraph.</p>;
+    <script>
+        window.alert(85+58);
+    </script>
+    <h3>Using console.log():</h3>
+    <p>For debugging purposes, you can call the console.log() method in the browser to display data.</p>
+    <script>
+        console.log(85+58);
+    </script>
+    <h3>JavaScript Print</h3>
+    <p>JavaScript does not have any print object or print methods.You cannot access output devices from JavaScript.The only exception is that you can call the window.print() method in the browser to print the content of the current window.</p>
+    <button onclick="window.print()">Print this page</button>
+
+    <h3>Statements:</h3>
+    <p id="add"></p>
+    <script>
+        let x,y,z;
+        x=85;
+        y=58;
+        z=x+y;
+        document.getElementById("add").innerHTML="The value of z is " + z + ".";
+    </script>
+    <h3>JavaScript Code Blocks:</h3>
+    <p>JavaScript code blocks are written between { and }</p>
+    <button type="button" onclick="myFunction()">Click Me!</button>
+    <p id="state"></p>
+    <p id="statement"></p>
+    <script>
+        function myFunction(){
+        document.getElementById("state").innerHTML="Hello Dolly!";
+        document.getElementById("statement").innerHTML = "How are you?";
+        }
+    </script>
+    <h3>String Expressions</h3>
+    <p id="stringexp"></p>
+    <script>
+        document.getElementById("stringexp").innerHTML="Suba" + " " + "Shree"
     </script>
 </body>
 </html>

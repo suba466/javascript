@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/scriptjs/set1.css">
+</head>
+<body>
+    <h2 style="text-align: center;">JAVA SCRIPT TASK 2</h2><br>
+    <div class="container"><br>
+        <h4>1.Increasing the value:</h4>
+        <input type="number" id="input1" placeholder="Enter a number..">
+        <button onclick="increase()">Output</button>
+        <div id="output1"><p>Current value: <span id="currentValue">--</span>
+        </div>
+
+        <h4>2.Swap two numbers:</h4>
+        <input type="number" id="input2" placeholder="Enter a number..">
+        <input type="number" id="input3" placeholder="Enter a number..">
+        <button onclick="swap()">Output</button>
+        <div id="output2"><p>A: <span id="currentValue1">--</span> B: <span id="currentValue2">--</span></p></div>
+
+        <h4>3.Remove leading and trailing spaces:</h4>
+        <input type="text" id="input4" placeholder="Enter a string..">
+        <button onclick="trim()">Output</button>
+        <div id="output3"></div><br>
+
+        <h4>4.Undefined variable:</h4>
+        <input type="text" id="varName" placeholder="Enter Variable name:">
+        <button onclick="unDefined()">Output</button>
+        <div id="output4"></div><br>
+
+        <h4>5.Current date:</h4>
+        <button onclick="document.getElementById('date').innerHTML=new Date().toLocaleDateString()">Click here to display current date</button>
+        <p id="date"></p>
+
+        <h4>6.15days from current date:</h4>
+        <button onclick="date1()">Click here to see the date </button>
+        <div id="output5"></div><br>
+
+        <h4>7.No: of days between:</h4>
+        <input type="date" id="date1" >
+        <input type="date" id="date2" >
+        <button onclick="date2()">Output</button>
+        <div id="output6"></div><br>
+
+        <h4>8.Generate a random number:</h4>
+        <input type="number"id="num1" placeholder="Enter a number..">
+        <input type="number"id="num2" placeholder="Enter a number..">
+        <button onclick="random()">Output</button>
+        <div id="output7"></div><br>
+
+        <h4>9.Generate 4 digit number:</h4>
+        <button onclick="random1()">Click here to generate 4 digit number</button>
+        <div id="output8"></div><br>
+
+        <h4>10.Check a number:</h4>
+        <input type="number" id="checkInt" placeholder="Enter a number..">
+        <button onclick="check()">Output</button>
+         <div id="output9"></div>
+        <script src="/scriptjs/set2.js"></script>
+    </div>
+   
+</body>
+</html>
