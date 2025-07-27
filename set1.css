@@ -1,10 +1,10 @@
 body{
     font-family: 'Courgette', cursive;
     padding: 40px;
-    color: rgb(37, 113, 160);
+    color: rgb(0, 0, 0);
 }
 .container{
-    background-color: #fff;
+    background-color: #ffffff;
     box-shadow: 0 0 10px #ccc;
 }
 input{
@@ -16,10 +16,10 @@ button{
     padding: 8px 15px;
     cursor: pointer;
     border: 2px solid black;
-    color: rgb(37, 113, 160);
+    color: rgb(0, 3, 5);
 }
 .output{
     margin-top: 10px;
     font-weight: bold;
-    color: #333;
+    color: #000000;
 }
