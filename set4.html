@@ -22,6 +22,88 @@
         <input type="text" id="input3" placeholder="Enter values.. ">
         <button onclick="unique()">Output</button>
         <div id="output2"></div><br>
+
+        <h4>3.Sort the array and find the center value:</h4>
+        <input type="text" id="input4" placeholder="Enter an array..">
+        <button onclick="sorting()">Output</button>
+        <div id="output3"></div><br>
+
+        <h4>4.Rupees denominations:</h4>
+        <input type="number" id="input5" placeholder="Enter the amount..">
+        <button onclick="rupees()">Output</button>
+        <div id="output4"></div><br>
+
+        <h4>5.Dropdown list:</h4>
+        <label for="">Country:</label>
+        <select id="country" onchange="updateCities()">
+            <option value="Select">--Select Country--</option>
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+        </select><br><br>
+        <label for="">City:</label>
+        <select id="city">
+            <option value="">--Select city--</option>
+        </select><br><br>
+
+        <h4>6.Array combined task:</h4>
+        <input type="text" id="input6" placeholder="Enter an array..">
+        <input type="text" id="input7" placeholder="Enter an array..">
+        <button onclick="processArray()">Output</button>
+        <div id="output5"></div><br>
+
+        <h4>7.Radio button:</h4>
+        <label for="">Do you have experience with JavaScript?</label>
+        <div class="form-check">
+                  <input class="form-check-input" type="radio" name="experience" onclick="toggleSection(true)">YES
+        </div>
+        <div class="form-check">
+                  <input class="form-check-input" type="radio" name="experience" onclick="toggleSection(false)">NO
+        </div>
+        <div id="experienceSection" style="display:none;">
+            <label for="details">Please describe your experience..</label><br>
+            <textarea id="details" rows="4"cols="50"></textarea>
+        </div><br>
+
+        <h4>8.Checkbox selection:</h4>
+        <label>Select your hobbies:</label>
+        <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="hobbies" value="Singing" >Singing      
+        </div>
+        <div class="form-check">
+                  <input class="form-check-input" type="checkbox"  name="hobbies" value="Dancing" >Dancing 
+        </div>
+        <div class="form-check">
+                  <input class="form-check-input" type="checkbox"  name="hobbies" value="Sleeping" >Sleeping
+        </div>
+        <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="hobbies" value="Reading books" >Reading books
+        </div>
+        <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="hobbies" value="Travel" >Travel
+        </div>
+        <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="hobbies" value="Drawing" >Drawing
+        </div>
+        <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="hobbies" value="Gaming" >Gaming
+        </div><button onclick="validateSelection()">Submit</button>
+        <div id="output6"></div><br>
+
+        <h4>9.Leap year and date format:</h4>
+        <input type="text" id="yearInput" placeholder="Enter a year..">
+        <button onclick="checkLeap()">Output</button>
+        <div id="output7"></div>
+        <input type="date" id="dateInput" >
+        <button onclick="formateDate()">Output</button>
+        <div id="output8"></div><br>
+
+        <h4>10.Stack Operations:</h4>
+        <input type="text" id="stackInput" placeholder="Enter a value...">
+        <button onclick="push()">Push</button>
+        <button onclick="pop()">Pop</button>
+        <button onclick="peek()">Peek</button>
+        <button onclick="isEmpty()">Is Empty?</button>
         <script src="/scriptjs/set4.js"></script>
     </div>
 </body>
