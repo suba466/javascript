@@ -135,3 +135,52 @@ function formateDate(){
     const year=String(date.getFullYear());
     output.innerText="Formatted Date: "+ day+"/"+month+"/"+year;
 }
+const stack=[];
+function push(){
+    const input=document.getElementById("stackInput").value;
+    if(input!==""){
+        stack.push(input);
+        document.getElementById("stackInput").value="";
+        document.getElementById("output9").innerText="";
+        showStack();
+    }
+}
+function peek(){
+    const output = document.getElementById("output9");
+    if(stack.length == 0){
+        output.innerText = "Stack is empty!";
+    } else {
+        output.innerText = "Top: " + stack[stack.length - 1];
+    }
+}
+
+function pop(){
+    const output = document.getElementById("output9");
+    if(stack.length == 0){
+        output.innerText = "Stack is empty!";
+    } else {
+        let removed = stack.pop();
+        output.innerText = "Popped: " + removed;
+        showStack();
+    }
+}
+
+function isEmpty() {
+    const output = document.getElementById("output9");
+    output.innerText =
+      stack.length === 0 ? "Yes, the stack is empty." : "No, the stack is not empty.";
+}
+
+function showStack(){
+    let area=document.getElementById("stackContainer");
+    area.innerHTML="";
+    for(let i=stack.length-1;i>=0;i--){
+        let item=document.createElement("div");
+        item.innerText=stack[i];
+        item.style.background="#4CAF50";
+        item.style.color = "white";
+        item.style.margin = "2px";
+    item.style.padding = "5px";
+    area.appendChild(item);
+    }
+}
