@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>heading</h1>
+    <input type="text" id="name">
+    <p id="test"></p>
+    <button onclick="display()">click</button>
+    <script>
+        function display(){
+        document.getElementById('test').innerHTML="hi and welcome"
+        let t= document.getElementById('name').value
+        alert("hii "+t)
+        console.log("welcome")
+        }
+    </script>
+</body>
+</html>
