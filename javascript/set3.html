@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/scriptjs/set1.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <h2 style="text-align: center;">JAVA SCRIPT TASK 3</h2><br>
+    <div class="container"><br>
+        <h4>1.DOB validation:</h4>
+        <input type="date"id="dob">
+        <button onclick="dob()">Output</button>
+        <div id="output1"></div><br>
+
+        <h4>2.Disable dates from date picker:</h4>
+        <input type="text" id="myDate"><br>
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+        <h4>3.Convert date into a number:</h4>
+        <input type="date" name="" id="dateInput">
+        <button onclick="convert()">Output</button>
+        <div id="output2"></div><br>
+
+        <h4>4.Dimensions of an image:</h4>
+        <input type="file" id="image" accept="image/*">
+        <button onclick="dimension()">Output</button>
+        <div id="output3"></div><br>
+
+        <h4>5.Current URL:</h4>
+        <button onclick="url()">Click here to get the current URL</button>
+        <div id="output4"></div><br>
+
+        <h4>6.Countdown Timer</h4>
+        <input type="number" id="timerInput" placeholder="Enter seconds..">
+        <button onclick="timer()">Output</button>
+        <div id="output5"></div><br>
+
+        <h4>7.Include a JS file in Another JS file:</h4>
+        <button id="showGreeting">Show Greeting</button>
+        <div id="output6"></div><br>
+        <script type="module" src="/scriptjs/main.js"></script>
+
+        <h4>8.Dynamic width based on typing:</h4>
+        <input type="text" id="dynamicInput" placeholder="Type here.." oninput="adjustWidth()" style="width: 10ch;">
+        <div id="output7"></div><br>
+
+        <h4>9.Range of numbers and characters:</h4>
+        <label for="">Start range:</label>
+        <input type="text" id="startRange" ><br>
+        <label for="">End range: </label>
+        <input type="text" id="endRange" >
+        <button onclick="generateRange()">Output</button>
+        <div id="output8"></div><br>
+
+        <h4>10.Get file extension:</h4>
+        <input type="file" id="getFile">
+        <button onclick="getExtension()">Output</button>
+        <div id="output9"></div>
+        <script src="/scriptjs/set3.js"></script>
+    </div>
+</body>
+</html>
