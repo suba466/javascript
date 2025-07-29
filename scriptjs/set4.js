@@ -177,10 +177,71 @@ function showStack(){
     for(let i=stack.length-1;i>=0;i--){
         let item=document.createElement("div");
         item.innerText=stack[i];
-        item.style.background="#4CAF50";
+        item.style.background="#000000ff";
         item.style.color = "white";
         item.style.margin = "2px";
     item.style.padding = "5px";
     area.appendChild(item);
     }
+}
+const queue=[];
+function enQueue(){
+    const input=document.getElementById("queueInput").value.trim();
+    if(input!==""){
+        queue.push(input);
+        document.getElementById("queueInput").value="";
+        document.getElementById("output10").innerText="";
+        showQueue();
+    }
+}
+function deQueue(){
+    const output=document.getElementById("output10");
+    if(queue.length==0){
+        output.innerText="Queue is empty.";
+    }else{
+        const removed=queue.shift();
+        output.innerText="Dequeued: "+removed;
+        showQueue();
+    }
+}
+function front(){
+    const output=document.getElementById("output10");
+    if(queue.length==0){
+        output.innerText="Queue is empty.";
+    }else{
+        output.innerText="Front: "+queue[0];
+    }
+}
+function isQueueEmpty(){
+    const output=document.getElementById("output10");
+    output.innerText=
+        queue.length==0 ?"Yes, the queue is empty." : "No, the queue is not empty."
+}
+function showQueue(){
+    let area=document.getElementById("queueContainer");
+    area.innerHTML="";
+    for (let i = 0; i < queue.length; i++) {
+        let item=document.createElement("div");
+        item.innerText=queue[i];
+        item.style.background="#000000ff";
+        item.style.color = "white";
+        item.style.margin = "2px";
+    item.style.padding = "5px";
+    area.appendChild(item);
+    }
+}
+let countFunc;
+function countClosure(){
+    if(!countFunc){
+        let input=Number(document.getElementById("closureInput").value.trim());
+        if (input=="" || isNaN(input)){
+            document.getElementById("output11").innerText="Please enter the value.";
+            return
+        }
+        let count=Number(input)
+        countFunc=function(){
+            count+=1;
+            document.getElementById('output11').innerText="Current count: "+count;
+        };
+    }countFunc();
 }
