@@ -13,7 +13,7 @@ function handleImageChange(e){
             <input type="file" accept="image/*" onChange={handleImageChange} />
             {image &&(
                 <div style={{marginTop:"10px"}}>
-                    <img src={image} alt="Uploaded Preview" style={{borderRadius:"8px"}}/>
+                    <img src={image} alt="Uploaded Preview" style={{borderRadius:"8px" }}/>
                     <p>Your uploaded image!!</p>
             </div>
         )}
