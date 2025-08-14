@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        function MyInfo(){
+            const name="Thendral";
+            const age=22;
+            return(
+                <div>
+                    <h5>My Name : {name}</h5>
+                    <h5>My Age : {age}</h5>
+                </div>
+            );
+        }
+        function MyHobbies(){
+            return(
+                <div>
+                    <h5>My Hobbies:</h5>
+                    <ul>
+                        <li>Reading</li>
+                        <li>Drawing</li>
+                        <li>Coding</li>
+                    </ul>
+                </div>
+            );
+        }
+        function App(){
+            return(
+                <div>
+                    <MyInfo/>
+                    <MyHobbies/>
+                </div>
+            );
+        }
+        const container=document.getElementById('root');
+        const root=ReactDOM.createRoot(container);
+        root.render(<App/>);
+    </script>
+</body>
+</html>

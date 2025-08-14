@@ -1,0 +1,10 @@
+.bgs{
+  
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.card{
+  width: 33%;
+  float: left;
+  background-color: yellowgreen;
+}
