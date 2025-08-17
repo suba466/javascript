@@ -1,9 +1,14 @@
-function Home({name, setName}){
-    return (
-        <div className="">
-            <input type="text" placeholder="Enter your name.." value={name} onChange={(e)=> setName(e.target.value)} style={{padding:"5px", marginRight:"10px"}} />
-            
-        </div>
-    );
+function Home({ name, setName }) {
+  return (
+    <div>
+      <input
+        type="text"
+        className="form-control"
+        placeholder="Enter your name..."
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+    </div>
+  );
 }
-export default Home;
+export default Home
