@@ -44,69 +44,48 @@ function Nav() {
         <button>Salad</button>
         <button>Noodles</button>
       </div>
-      <div className="container" >
-        <div className="card" style={{width: "13rem", float:"left", border:"none"}}>
-          <img src={food1} class="card-img-top" alt="..."/>
-         <div className="card-body">
-          <h5 className="card-title">Fusce dictum finibus</h5>
-          <p className="card-text">Nam in suscipit nisi, sit amet consectetur metus. Ut sit amet tellus accumsan</p>
-          <p style={{color:"#2F956D",fontSize: "1.25rem"}}>$45 / $55</p></div></div>
-         <div className="card" style={{width: "13rem", float:"left",marginLeft:"20px", border:"none"}}>
-          <img src={food2} class="card-img-top" alt="..."/>
-         <div className="card-body">
-          <h5 className="card-title">Aliquam sagittis</h5>
-          <p className="card-text">Nam in suscipit nisi, sit amet consectetur metus. Ut sit amet tellus accumsan</p>
-          <p style={{color:"#2F956D",fontSize: "1.25rem"}}>$65 / $70</p></div></div>
-           <div className="card" style={{width: "13rem", float:"left",marginLeft:"20px", border:"none"}}>
-          <img src={food3}class="card-img-top" alt="..."/>
-         <div className="card-body">
-          <h5 className="card-title">Sed varius turpis</h5>
-          <p className="card-text">Nam in suscipit nisi, sit amet consectetur metus. Ut sit amet tellus accumsan</p>
-          <p style={{color:"#2F956D",fontSize: "1.25rem"}}>$30.50</p></div></div>
-         <div className="card" style={{width: "13rem", float:"left",marginLeft:"20px", border:"none"}}>
-          <img src={food4} class="card-img-top" alt="..."/>
-         <div className="card-body">
-          <h5 className="card-title">Aliquam sagittis</h5>
-          <p className="card-text">Nam in suscipit nisi, sit amet consectetur metus. Ut sit amet tellus accumsan</p>
-          <p style={{color:"#2F956D",fontSize: "1.25rem"}}>$25.50</p></div></div>
-           <div className="card" style={{width: "13rem", float:"left", border:"none"}}>
-          <img src={food5} class="card-img-top" alt="..."/>
-         <div className="card-body" >
-          <h5 className="card-title">Maecenas eget justo</h5>
-          <p className="card-text">Nam in suscipit nisi, sit amet consectetur metus. Ut sit amet tellus accumsan</p>
-          <p style={{color:"#2F956D",fontSize: "1.25rem"}}>$80.25</p></div></div>
-         <div className="card" style={{width: "13rem", float:"left",marginLeft:"20px", border:"none"}}>
-          <img src={food6} class="card-img-top" alt="..."/>
-         <div className="card-body">
-          <h5 className="card-title">Quisque et felis eros</h5>
-          <p className="card-text">Nam in suscipit nisi, sit amet consectetur metus. Ut sit amet tellus accumsan</p>
-          <p style={{color:"#2F956D",fontSize: "1.25rem"}}>$20 / $40 / $60</p></div></div>
-           <div className="card" style={{width: "13rem", float:"left",marginLeft:"20px", border:"none"}}>
-          <img src={food7} class="card-img-top" alt="..."/>
-         <div className="card-body">
-          <h5 className="card-title">Sed ultricies dui</h5>
-          <p className="card-text">Nam in suscipit nisi, sit amet consectetur metus. Ut sit amet tellus accumsan</p>
-          <p style={{color:"#2F956D",fontSize: "1.25rem"}}>$94</p></div></div>
-         <div className="card" style={{width: "13rem", float:"left",marginLeft:"20px", border:"none"}}>
-          <img src={food8} class="card-img-top" alt="..."/>
-         <div className="card-body">
-          <h5 className="card-title">Donec porta consequat</h5>
-          <p className="card-text">Nam in suscipit nisi, sit amet consectetur metus. Ut sit amet tellus accumsan</p>
-          <p style={{color:"#2F956D",fontSize: "1.25rem"}}>$15</p></div></div>
-</div> 
-<div className="container-fluid" style={{marginTop:"50px"}}>
-      <div class="container">
-        <div class="row" style={{float:"left"}}>
-          <div class="col">
-            <img src={img1} />
+<div className="container">
+  <div className="row" style={{width:"100%"}}>
+    {[
+      { img: food1, title: "Fusce dictum finibus", price: "$45 / $55" },
+      { img: food2, title: "Aliquam sagittis", price: "$65 / $70" },
+      { img: food3, title: "Sed varius turpis", price: "$30.50" },
+      { img: food4, title: "Aliquam sagittis", price: "$25.50" },
+      { img: food5, title: "Maecenas eget justo", price: "$80.25"},
+      { img: food6, title: "Quisque et felis eros", price: "$20 / $40 / $60"},
+      { img: food7, title: "Sed ultricies dui", price: "$94" },
+      { img: food8, title: "Donec porta consequat", price: "$15" },
+    ].map((food, i) => (
+      <div className="col " key={i}>
+        <div className="card border-0 shadow-sm" style={{width:"13rem"}}>
+          <img src={food.img} className="card-img-top" alt={food.title} />
+          <div className="card-body">
+            <h5 className="card-title">{food.title}</h5>
+            <p className="card-text text-muted">
+              Nam in suscipit nisi, sit amet consectetur metus. Ut sit amet tellus accumsan
+            </p>
+            <p className="text-success fs-5">{food.price}</p>
           </div>
-          <div class="col " style={{border:"2px solid black"}} >
-             
-          </div>
-          
         </div>
+      </div>
+    ))}
+  </div>
 </div>
-  </div>  
+
+<div className="container" style={{margin:"40px auto"}}>
+<div className="box">
+  <img src={img1} alt="acado" />
+  <div className="box1" style={{textAlign:"center"}}>
+    <h5 style={{color:"#1a6692"}}>Maecenas nulla neque</h5>
+    <p style={{color:'Gray'}}>
+      Redistributing this template as a downloadable ZIP file on any template collection site 
+      is strictly prohibited. You will need to <a href="">talk to us</a> for additional 
+      permissions about our templates. Thank you.
+    </p>
+    <button>Read more</button>
+  </div>
+</div>
+ </div>
       </div>
       
     

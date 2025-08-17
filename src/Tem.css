@@ -55,8 +55,22 @@ button:hover{
     font-size: 0.85rem;
     color:rgb(104, 103, 103);
 }
-.col1{
-    height: 300px;
-    border: 2px solid black;
+.box{
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
+.box img{
+    width: 350px;
+    height: auto;
+    object-fit: cover;
+}
+.box1{
+    flex:1;
+}
+.col-lg-3{
+    width: 50%!important;
+}
+
+
 
