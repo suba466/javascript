@@ -1,19 +1,51 @@
-.img{
-    transition: transform 0.3s ease;
+.img {
+  transition: transform 0.3s ease;
 }
-.img:hover{
-    transform: scale(1.1); 
+.img:hover {
+  transform: scale(1.1);
 }
-.native{
-    font-size: 14px;
-    color: rgba(84, 84, 84, 1.00);
+.native {
+  font-size: 14px;
+  color: rgba(84, 84, 84, 1.00);
 }
-.logo-img{
-    height: 35px;
-    width: auto;
+.logo-img {
+  height: 35px;
+  width: auto;
 }
 
-.btn:hover{
-    background-color: white;
-    color: gray;
+.urban-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.location-box, .search-box {
+  width: 100%;
+  min-width: 0; 
+}
+
+.modal input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 12px;
+}
+.search-wrapper {
+  position: relative;
+  width: 100%;
+}
+.search-icon {
+  position: absolute;
+  left: 10px;       
+  top: 50%;
+  transform: translateY(-50%);
+  color: gray;
+  font-size: 16px;
+  pointer-events: none; 
+}
+.search-box {
+  padding-left: 35px;  
+}
+.note{
+    font-size: 25px;
 }

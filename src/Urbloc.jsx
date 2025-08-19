@@ -1,49 +1,96 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import { IoMdLocate } from "react-icons/io";
-import {useState} from 'react';
-import { Dropdown, Modal } from 'react-bootstrap';
 import Col from 'react-bootstrap/Col';
+import { Dropdown, Modal } from 'react-bootstrap';
+import { IoMdLocate } from "react-icons/io";
 import { CiLocationOn } from "react-icons/ci";
-import './Urbanav.css'
-function Urbloc(){
-    const[show, setShow]=useState(false);
-    const handleClose=()=>setShow(false);
-    const handleShow=()=>setShow(true);
-    return(
-        <Container style={{marginLeft:"200px"}}>
-      <Row>
-        <Col>
-           <Dropdown >
-            <Dropdown.Toggle variant="outline-secondary" onClick={handleShow} style={{fontSize:"10px"}}>
-            <CiLocationOn style={{marginRight:"6px"}} />
-            184, Balaji Nagar- New....
+import { CiSearch } from "react-icons/ci";
+import { useState, useEffect } from 'react';
+import { LuNotepadText } from "react-icons/lu";
+import { LuShoppingCart } from "react-icons/lu";
+import { IoMdContact } from "react-icons/io";
+import './Urbanav.css';
+
+function Urbloc() {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  const placeholders = ["Facial", "AC Service", "Kitchen cleaning"];
+  const [index, setIndex] = useState(0);
+  const [subIndex, setSubIndex] = useState(0);
+  const [deleting, setDeleting] = useState(false);
+
+  useEffect(() => {
+    const currentWord = placeholders[index];
+    const speed = deleting ? 80 : 120;
+    const timer = setTimeout(() => {
+      if (!deleting && subIndex < currentWord.length) {
+        setSubIndex(subIndex + 1);
+      } else if (!deleting && subIndex === currentWord.length) {
+        setDeleting(true);
+      } else if (deleting && subIndex > 0) {
+        setSubIndex(subIndex - 1);
+      } else if (deleting && subIndex === 0) {
+        setDeleting(false);
+        setIndex((prev) => (prev + 1) % placeholders.length);
+      }
+    }, speed);
+
+    return () => clearTimeout(timer);
+  }, [subIndex, deleting, index, placeholders]);
+
+  return (
+    <Container style={{ marginLeft: "200px" }}>
+      <Row className="urban-row">
+        <Col >
+          <Dropdown className='location-box '>
+            <Dropdown.Toggle 
+              variant="outline-secondary"
+              onClick={handleShow}
+              style={{
+                width: "100%",
+                padding: "8px",
+                borderRadius: "5px",
+                border: "1px solid #ccc",
+                fontSize: "12px"
+              }}>
+              <CiLocationOn style={{ marginRight: "6px" }} />
+              184, Balaji Nagar- New....
             </Dropdown.Toggle>
-           </Dropdown>
-           <Modal show={show} onHide={handleClose} centered>
-                <Modal.Header closeButton>
-                </Modal.Header>
+          </Dropdown>
+          <Modal show={show} onHide={handleClose} centered>
+            <Modal.Header closeButton></Modal.Header>
             <Modal.Body>
-                <input type="text" placeholder="Search location..."
+              <input type="text" placeholder="Search location..." />
+              <a href="#" style={{ color: "#1a6692", textDecoration: "none", fontSize: "12px" }}>
+                <IoMdLocate /> Use current location
+              </a>
+            </Modal.Body>
+          </Modal>
+        </Col>
+        <Col>
+        <div className='search-wrapper'>
+        <CiSearch className='search-icon'/>
+          <input
+            type="text"
+            placeholder={"      Search for " + placeholders[index].substring(0, subIndex) + "..."}
+            className='form-control search-box'
             style={{
-              width: "100%",
               padding: "8px",
+              minWidth:"250px",
               borderRadius: "5px",
               border: "1px solid #ccc",
-              marginBottom: "12px",
-              fontSize:"12px"            }}/>
-            <a href="#" style={{ color: "#1a6692", textDecoration:"none", fontSize:"12px"}}>
-            <IoMdLocate />Use current location
-          </a>
-            </Modal.Body>
-           </Modal>
+              fontSize: "12px"
+            }}
+          /></div>
         </Col>
-        <Col>1 of 1</Col>
-        <Col>1 of 1</Col>
-        <Col>1 of 1</Col>
-        <Col>1 of 1</Col>
+        <Col><LuNotepadText className='note'/></Col>
+        <Col><LuShoppingCart className='note'/></Col>
+        <Col><IoMdContact className='note'/></Col>
       </Row>
     </Container>
-    )
+  );
 }
+
 export default Urbloc;
