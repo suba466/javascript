@@ -15,7 +15,7 @@ function Urbloc() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
+  const [searchValue, setSearchValue]=useState("")
   const placeholders = ["Facial", "AC Service", "Kitchen cleaning"];
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
@@ -42,8 +42,8 @@ function Urbloc() {
 
   return (
     <Container style={{ marginLeft: "200px" }}>
-      <Row className="urban-row">
-        <Col >
+      <Row className="urban-row row-sm">
+        <Col className='row-sm' >
           <Dropdown className='location-box '>
             <Dropdown.Toggle 
               variant="outline-secondary"
@@ -69,12 +69,14 @@ function Urbloc() {
             </Modal.Body>
           </Modal>
         </Col>
-        <Col>
-        <div className='search-wrapper'>
-        <CiSearch className='search-icon'/>
+        <Col className='row-sm'>
+        <div className='search-wrapper' style={{position:"relative"}}>
+          {searchValue==""&&(
+            <CiSearch className='search-icon' />
+          )}
           <input
-            type="text"
-            placeholder={"      Search for " + placeholders[index].substring(0, subIndex) + "..."}
+            type="text" value={searchValue} onChange={(e)=>setSearchValue(e.target.value)}
+            placeholder={"     Search for " + placeholders[index].substring(0, subIndex) + "..."}
             className='form-control search-box'
             style={{
               padding: "8px",
@@ -85,9 +87,9 @@ function Urbloc() {
             }}
           /></div>
         </Col>
-        <Col><LuNotepadText className='note'/></Col>
-        <Col><LuShoppingCart className='note'/></Col>
-        <Col><IoMdContact className='note'/></Col>
+        <Col><LuNotepadText className='note row-sm'/></Col>
+        <Col><LuShoppingCart className='note row-sm'/></Col>
+        <Col><IoMdContact className='note row-sm'/></Col>
       </Row>
     </Container>
   );
