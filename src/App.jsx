@@ -6,6 +6,8 @@ import { FiClock } from "react-icons/fi";
 import Home from './Home'
 import Count from './Count'
 import Image from './Image'
+import Sample from './Sample';
+import Demo from './Demo';
 
 
 function App() {
@@ -22,9 +24,11 @@ function App() {
   }
   return (
     <>
-    <div className=''>
+    <div className='' style={{textAlign:"center"}}>
+      <Sample res={count}/>
+      <Demo />
         <Home name={name} setName={setName} />
-        <p><FiClock style={{fill:red}} />Current Time:{new Date().toLocaleTimeString()}</p>
+        <p><FiClock style={{fill:"red"}} />Current Time:{new Date().toLocaleTimeString()}</p>
         <Count count={count} step={step} setStep={setStep} increase={increase} decrease={decrease} />
         <Image/>
       </div>
