@@ -5,6 +5,7 @@ import team3 from './assets/team-image3.jpg';
 import Card from 'react-bootstrap/Card';
 import { FaLinkedin } from "react-icons/fa";
 import { IoMailOutline } from "react-icons/io5";
+import { Button } from "react-bootstrap";
 function Meet(){
     return(
         <Container style={{margin:"40px auto"}}>
@@ -15,8 +16,13 @@ function Meet(){
                     <div className="chef1 card">
                         <Card.Img variant="top" src={team1} />
                         <div className="overlay">
-                            <h6>Duis vel lacus id magna mattis vehicula</h6>
-                            <FaLinkedin /><IoMailOutline />
+                            <h4 style={{textAlign:"center"}}>Duis vel lacus id magna mattis vehicula</h4>
+                            <Button variant="outline-danger" className="danger">
+                                    <FaLinkedin style={{fontSize:"15px",display:"inline-flex"}}/>
+                            </Button>
+                            <Button variant="outline-danger" className="danger">
+                                    <IoMailOutline style={{fontSize:"15px",display:"inline-flex"}}/>
+                            </Button>
                         </div>
                     </div>
                     <Card.Body>
@@ -32,8 +38,11 @@ function Meet(){
                     <div className="chef1 card">
                         <Card.Img variant="top" src={team2} />
                         <div className="overlay">
-                            <h6>Duis vel lacus id magna mattis vehicula</h6>
-                            <FaLinkedin style={{display:"inline-block"}}/><IoMailOutline />
+                            <h4 style={{textAlign:"center"}}>Duis vel lacus id magna mattis vehicula</h4>
+                            <ul className="social-icon">
+                                
+
+                            </ul>
                         </div>
                     </div>
                     <Card.Body>
@@ -49,7 +58,7 @@ function Meet(){
                     <div className="chef1 card">
                         <Card.Img variant="top" src={team3} />
                         <div className="overlay">
-                            <h6>Duis vel lacus id magna mattis vehicula</h6>
+                            <h4 style={{textAlign:"center"}}>Duis vel lacus id magna mattis vehicula</h4>
                             <FaLinkedin /><IoMailOutline />
                         </div>
                     </div>

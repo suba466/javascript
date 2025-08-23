@@ -71,15 +71,19 @@ body{
   transform: translateY(100%);
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
-
 .chef1 .card {
   position: relative;
   overflow: hidden;
 }
-
 .chef1 .card:hover .overlay {
   opacity: 1;
   transform: translateY(0);
+}
+.danger{
+  border-radius: 200px;
+  border: 0px;
+  color: white;
+  display: inline!important;
 }
 
 

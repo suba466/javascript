@@ -1,0 +1,16 @@
+.valid {
+  border-color: green!important;
+}
+.invalid {
+  border-color: red!important;
+}
+.App{
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  padding: 2rem;
+  width: 50%;
+  max-width: 100%;
+}
+.input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+  border-radius: 0px;
+}
