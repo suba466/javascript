@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import img1 from "./assets/img-01.jpg";
+
 import Button from 'react-bootstrap/Button'; 
 import './Tem1.css'
 function Pro(){

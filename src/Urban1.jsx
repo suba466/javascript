@@ -42,7 +42,7 @@ function Urban1() {
                 <Col xs={3} className='css3'>
                     <Col className="css2 " style={{justifyContent:"center",width:"100%"}}>
                     <img src={water} alt="" /></Col>
-                    <Col><p className='label'>Native Water</p>
+                    <Col><p className='label'>Native Water Purifier</p>
                     </Col>
                 </Col>
             

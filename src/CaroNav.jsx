@@ -31,12 +31,12 @@ function CaroNav() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Row style={{marginRight:"70px"}}>
-            <Col ><Nav.Link href="#home"><h5 style={{fontSize:"15px"}}>Home</h5></Nav.Link></Col>
-            <Col ><Nav.Link href="#link"><h5 style={{fontSize:"15px"}}>Above</h5></Nav.Link></Col>
-            <Col ><Nav.Link href="#link"><h5 style={{fontSize:"15px"}}>Chef</h5></Nav.Link></Col>
-            <Col ><Nav.Link href="#link"><h5 style={{fontSize:"15px"}}>Menu</h5></Nav.Link></Col>
-            <Col ><Nav.Link href="#link"><h5 style={{fontSize:"15px"}}>Contact</h5></Nav.Link></Col></Row>
+            
+           <Nav.Link href="#home"><h5 style={{fontSize:"13px"}}>Home</h5></Nav.Link>
+            <Nav.Link href="#link"><h5 style={{fontSize:"13px"}}>Above</h5></Nav.Link>
+            <Nav.Link href="#link"><h5 style={{fontSize:"13px"}}>Chef</h5></Nav.Link>
+            <Nav.Link href="#link"><h5 style={{fontSize:"13px"}}>Menu</h5></Nav.Link>
+            <Nav.Link href="#link"><h5 style={{fontSize:"13px"}}>Contact</h5></Nav.Link>
            <Nav.Link href="#link"><h5 style={{fontSize:"15px"}} >CALL NOW!
                 <IoIosCall/> 010 020 0340</h5>
             </Nav.Link>
