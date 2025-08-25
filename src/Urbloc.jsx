@@ -41,15 +41,14 @@ function Urbloc() {
   }, [subIndex, deleting, index, placeholders]);
 
   return (
-    <Container style={{ marginLeft: "200px" }}>
-      <Row className="urban-row row-sm">
-        <Col className='row-sm' >
+    <Container fluid>
+      <Row className="urban-row g-2 ">
+        <Col xs="auto" >
           <Dropdown className='location-box '>
             <Dropdown.Toggle 
               variant="outline-secondary"
               onClick={handleShow}
               style={{
-                width: "100%",
                 padding: "8px",
                 borderRadius: "5px",
                 border: "1px solid #ccc",
@@ -62,14 +61,14 @@ function Urbloc() {
           <Modal show={show} onHide={handleClose} centered>
             <Modal.Header closeButton></Modal.Header>
             <Modal.Body>
-              <input type="text" placeholder="Search location..." />
+              <input type="text" placeholder="Search location..." className=" mr-sm-2"/>
               <a href="#" style={{ color: "#1a6692", textDecoration: "none", fontSize: "12px" }}>
                 <IoMdLocate /> Use current location
               </a>
             </Modal.Body>
           </Modal>
         </Col>
-        <Col className='row-sm'>
+        <Col xs="auto">
         <div className='search-wrapper' style={{position:"relative"}}>
           {searchValue==""&&(
             <CiSearch className='search-icon' />
@@ -80,16 +79,15 @@ function Urbloc() {
             className='form-control search-box'
             style={{
               padding: "8px",
-              minWidth:"250px",
               borderRadius: "5px",
               border: "1px solid #ccc",
               fontSize: "12px"
             }}
           /></div>
         </Col>
-        <Col><LuNotepadText className='note row-sm'/></Col>
-        <Col><LuShoppingCart className='note row-sm'/></Col>
-        <Col><IoMdContact className='note row-sm'/></Col>
+        <Col  ><LuNotepadText className='note row-sm'/></Col>
+        <Col  ><LuShoppingCart className='note row-sm'/></Col>
+        <Col  ><IoMdContact className='note row-sm'/></Col>
       </Row>
     </Container>
   );
