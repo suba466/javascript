@@ -1,0 +1,62 @@
+.caption{
+    margin-bottom: 300px;
+    text-align: left;
+    margin-left: 0px;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+}
+.navbar-transparent{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 1000;
+    transition: background-color 0.4s ease;
+}
+.navbar-transparent .nav-link,
+.navbar-transparent .navbar-brand,
+.navbar-transparent .dropdown-toggle {
+  color: white !important;
+}
+.navbar-colored {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: background-color 0.4s ease;
+  z-index: 1000;
+}
+.navbar-colored .nav-link,
+.navbar-colored .navbar-brand,
+.navbar-colored .dropdown-toggle {
+  color: black !important;
+}
+.navbar .nav-link {
+  position: relative;
+  margin-left: 15px;
+}
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: red;
+  transition: width 0.3s ease;
+}
+.navbar .nav-link:hover::after {
+  width: 100%;
+}
+.carousel-indicators [data-bs-target]{
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.carousel-control-next-icon .carousel-control-prev-icon{
+    background-image: none;
+}
+
+
