@@ -7,7 +7,7 @@ import Home from './Home'
 import Count from './Count'
 import Image from './Image'
 
-import Demo from './Demo';
+
 //import { profile } from './profilecontext';
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
       <profile.Provider value={name}>
 
       
-      <Demo />
+     
         <Home name={name} setName={setName} />
 
       </profile.Provider>
