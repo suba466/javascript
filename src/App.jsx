@@ -6,7 +6,7 @@ import { FiClock } from "react-icons/fi";
 import Home from './Home'
 import Count from './Count'
 import Image from './Image'
-import Sample from './Sample';
+
 import Demo from './Demo';
 //import { profile } from './profilecontext';
 
@@ -27,7 +27,7 @@ function App() {
     <div className='' style={{textAlign:"center"}}>
       <profile.Provider value={name}>
 
-      <Sample res={count}/>
+      
       <Demo />
         <Home name={name} setName={setName} />
 
