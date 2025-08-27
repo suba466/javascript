@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { User } from "./User.jsx";
+import { profile } "./User.jsx";
 
 function Child() {
   const { userName, setUsername } = useContext(User);
