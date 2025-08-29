@@ -1,16 +1,18 @@
-import  { useContext } from "react";
-import { profile } from'./profilecontext.jsx';
+import { useContext } from "react";
+import { profile } from "./profile.jsx";
 import { Card, Button } from "react-bootstrap";
 
 function Box2() {
-  const { theme, changeTextColors } = useContext(profile);
+  const { theme, changeTextcolor } = useContext(profile);
   const t = theme.comp2;
 
   return (
-    <Card style={{ backgroundColor: t.backclr, color: t.clr }} className="p-3 mb-3 text-center">
-      <Card.Title>Component 2</Card.Title>
-      <Card.Text>This is Component 2</Card.Text>
-      <Button size="sm" variant="dark" onClick={changeTextColors}>Change Text Color</Button>
-    </Card>
+    <div style={{ margin:"10px",backgroundColor: t.backclr, color: t.clr,width:"33.33%",height:"150px" }} >
+      <h3>Component 2</h3>
+      <p>Here we are changing the text color</p>
+      <Button  onClick={changeTextcolor}>Change color</Button>
+    </div>
   );
-}export default Box2
+}
+
+export default Box2;

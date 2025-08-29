@@ -1,16 +1,17 @@
 import { useContext } from "react";
-import { profile } from "./profilecontext.jsx";
-import { Card, Button } from "react-bootstrap";
+import { profile } from "./profile.jsx";
+import { Button } from "react-bootstrap";
 
- function Box3() {
-  const { theme, resetTheme } = useContext(profile);
+function Box3() {
+  const { theme, design } = useContext(profile);
   const t = theme.comp3;
 
   return (
-    <Card style={{ backgroundColor: t.backclr, color: t.clr }} className="p-3 mb-3 text-center">
-      <Card.Title>Component 3</Card.Title>
-      <Card.Text>This is Component 3</Card.Text>
-      <Button size="sm" variant="secondary" onClick={resetTheme}>Reset All</Button>
-    </Card>
+    <div style={{ margin:"10px", backgroundColor: t.backclr, color: t.clr, border:t.border, width:"33.33%", height:"150px" }}>
+      <h3>Component 3</h3>
+      <p>Here we are changing the design</p>
+      <Button onClick={design}>Change Design</Button>
+    </div>
   );
-}export default Box3
+}
+export default Box3;
