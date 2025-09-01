@@ -10,6 +10,7 @@ import Sample from './Sample';
 import Demo from './Demo';
 import { profile } from './profilecontext';
 
+
 function App() {
   
   const [count, setCount]=useState(0);
@@ -29,6 +30,7 @@ function App() {
 
       <Sample res={count}/>
       <Demo />
+      
         <Home name={name} setName={setName} />
 
       </profile.Provider>
