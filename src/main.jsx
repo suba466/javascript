@@ -6,10 +6,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 //import Urban from './Urban.jsx';<BrowserRouter><Urban/></BrowserRouter>
 //import Reducertask from './Reducertask.jsx';<Reducertask/>
-import LoginForm from './Loginform.jsx';
-import Form from './Form.jsx';
+
+//import Form from './Form.jsx';
+import Useform from './Useform.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-      <Form/>
+      <Useform/>
   </StrictMode>
 );
