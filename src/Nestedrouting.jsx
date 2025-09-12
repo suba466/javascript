@@ -1,23 +1,21 @@
-import { Routes, Route, Link } from "react-router-dom";
-import Dashboard from './Dashboard.jsx';
-import Home from './Home.jsx';
-import Profile from "./Profile.jsx";
+import { Routes, Route } from "react-router-dom";
+import Dashboard from "./Dashboard.jsx";
+import Home1 from "./Home1.jsx";
+import Profile1 from './Profile1.jsx'
 import Settings from "./Settings.jsx";
-function Nestedrouting(){
-    return(
-        <>
-            <nav style={{padding:"10px", background:"#eee"}}>
-                <h2 style={{textAlign:"center"}}>Nested Routing...</h2>
-                <Link to="/" style={{marginRight:"10px",textDecoration:"none", color:"black"}}>Home</Link>
-                <Link to="/dashboard" style={{marginRight:"10px",textDecoration:"none", color:"black"}}>Dashboard</Link>
-            </nav>
-            <Routes>
-                <Route path="/" element={<Home />}/>
-                <Route path="/dashboard/*" element={<Dashboard/>}>
-                    <Route path="profile" element={<Profile/>}/>
-                    <Route path="settings" element={<Settings/>}/>
-                </Route>
-            </Routes>
-        </>
-    )
-}export default Nestedrouting
+import  Form  from "./Form.jsx";
+function Nestedrouting() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home1 />} />
+      <Route path="/dashboard" element={<Dashboard />}>
+        <Route path="profile" element={<Profile1 />} />
+        <Route path="settings" element={<Settings />}>
+          <Route path="form" element={<Form/>}></Route>
+        </Route>
+      </Route>
+    </Routes>
+  );
+}
+
+export default Nestedrouting;
