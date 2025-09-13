@@ -3,7 +3,7 @@ import Dashboard from "./Dashboard.jsx";
 import Home1 from "./Home1.jsx";
 import Profile1 from './Profile1.jsx'
 import Settings from "./Settings.jsx";
-import  Form  from "./Form.jsx";
+import  Avacado  from "./Avacado.jsx";
 function Nestedrouting() {
   return (
     <Routes>
@@ -11,7 +11,7 @@ function Nestedrouting() {
       <Route path="/dashboard" element={<Dashboard />}>
         <Route path="profile" element={<Profile1 />} />
         <Route path="settings" element={<Settings />}>
-          <Route path="form" element={<Form/>}></Route>
+          <Route path="avacado" element={<Avacado/>}></Route>
         </Route>
       </Route>
     </Routes>
