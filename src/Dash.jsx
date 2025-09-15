@@ -12,7 +12,7 @@ const Dash = () => {
 
   return (
     <div>
-      <h2>Welcom {user?.name}</h2>
+      <h2>Welcome {user?.name}</h2>
       <p>This is your protected dashboard</p>
       <button onClick={handleLogout}>Logout</button>
     </div>

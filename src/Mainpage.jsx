@@ -7,6 +7,8 @@ const Mainpage = () => {
     <div>
       <h2>HomePage (Public)</h2>
       <button onClick={() => navigate("/login")}>Go to Login</button>
+      <button onClick={() => navigate("/prod")}>Go to Products</button>
+      <button onClick={() => navigate("/cart")}>Go to Cart</button>
     </div>
   );
 };

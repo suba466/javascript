@@ -4,21 +4,17 @@ import ProtectedRoute from "./ProtectedRoute";
 import Mainpage from "./Mainpage";
 import Dash from "./Dash";
 import Login from "./Login";
-
+import Prod from './Prod.jsx';
+import Cart from './Cart.jsx';
 function Protect() {
   return (
     <CreateAuth>
       <Routes>
         <Route path="/" element={<Mainpage />} />
         <Route path="/login" element={<Login />} />
-        <Route
-          path="/dash"
-          element={
-            <ProtectedRoute>
-              <Dash />
-            </ProtectedRoute>
-          }
-        />
+        <Route path="/dash"element={<ProtectedRoute><Dash /></ProtectedRoute>}/>
+        <Route path="/prod" element={<ProtectedRoute><Prod /></ProtectedRoute>} />
+        <Route path="/cart" element={<ProtectedRoute><Cart /></ProtectedRoute>} />
       </Routes>
     </CreateAuth>
   );
