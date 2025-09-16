@@ -1,19 +1,18 @@
+import { Button } from "react-bootstrap";
 import { useAuth } from "./CreateAuth.jsx";
-import { useNavigate } from "react-router-dom";
-
+import { useNavigate} from "react-router-dom";
 function Login() {
   const { login } = useAuth();
   const navigate = useNavigate();
-
   const handleLogin = () => {
     login("Suba");
-    navigate("/dash"); 
+    alert("Logged in successfully!!")
+    navigate("/prod");
   };
-
   return (
     <div>
       <h2>Login Page</h2>
-      <button onClick={handleLogin}>Login as Suba</button>
+      <Button onClick={handleLogin}>Login as Suba</Button>
     </div>
   );
 }
