@@ -2,6 +2,11 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '@fontsource/montserrat/400.css';
+import '@fontsource/montserrat/500.css';
+import '@fontsource/montserrat/700.css';
+import '@fontsource/montserrat/800.css';
+
 //import Regis from './Regis.jsx';
 //import Useparam from './Useparam.jsx';
 //import Articles from './Articles.jsx';
@@ -9,7 +14,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 //import Nestedrouting from './Nestedrouting.jsx';
 import Urban from './Urban'
 //import Protect from './Protect.jsx';
-import Authen from './Authen.jsx'
+//import Authen from './Authen.jsx'
+//import Reduxdemo from './Reduxdemo.jsx'
+//import { Provider } from 'react-redux';<Provider store={store}></Provider>
+//import {store} from './Store.js'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
