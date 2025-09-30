@@ -7,14 +7,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 //import Articles from './Articles.jsx';
 //import Uses from './Uses.jsx';
 //import Nestedrouting from './Nestedrouting.jsx';
-import Urban from './Urban'
+
 //import Protect from './Protect.jsx';
 import Authen from './Authen.jsx'
 import Fsdemo from './Fsdemo.jsx';
+import Productlist from './Productlist.jsx';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-      <Fsdemo/>
+      <Productlist/>
     </BrowserRouter>
   </StrictMode>
 );
