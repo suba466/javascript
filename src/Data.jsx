@@ -23,4 +23,32 @@ function Data(){
     useEffect(()=>{
         fetchProducts();
     },[]);
+
+    //register
+    const handleRegister=async(username,password)=>{
+        const res=await fetch("http://localhost:5000/reg",{
+            method:"POST",
+            headers:{"Content-Type":"application/json"},
+            body:JSON.stringify(username,password),
+        });
+        const data= await res.json();
+        alert(data.message);
+    };
+
+    //login
+    const handleLogin=async(username,password)=>{
+        const res=await fetch("http://localhost:5000/login",{
+            method:"POST",
+            headers:{"Content-Type":"application/json"},
+            body:JSON.stringify(username,password),
+        });
+        const data= await res.json();
+        if(data.token){
+            setToken(data.token);
+            localStorage.setItem("token",data.token);
+            alert("Login successful")
+        }else{
+            alert(data.message);
+        }
+    };
 }
